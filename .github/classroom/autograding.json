@@ -3,7 +3,7 @@
       {
         "name": "Autograding",
         "setup": "",
-        "run": "run test",
+        "run": "./test.sh",
         "input": "",
         "output": "",
         "comparison": "included",
