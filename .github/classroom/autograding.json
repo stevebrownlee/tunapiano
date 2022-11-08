@@ -1,14 +1,14 @@
 {
     "tests": [
-      {
-        "name": "Autograding",
-        "setup": "",
-        "run": "python3 manage.py test",
-        "input": "",
-        "output": "",
-        "comparison": "included",
-        "timeout": 10,
-        "points": null
-      }
+        {
+            "name": "Autograding",
+            "setup": "pip install -r requirements.txt",
+            "run": "python3 manage.py test",
+            "input": "",
+            "output": "",
+            "comparison": "included",
+            "timeout": 10,
+            "points": null
+        }
     ]
-  }
+}
