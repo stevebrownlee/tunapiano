@@ -46,6 +46,13 @@ class ArtistTests(APITestCase):
         self.assertEqual(response_json["name"], "Olivia Vanderheuk")
         self.assertIn('id', response_json)
 
+    def test_get_404_artist(self) -> None:
+        """Get non-existant single artist test"""
+        url = reverse('artist-detail', args=[1003])
+        response = self.client.get(url)
+        self.assertEqual(status.HTTP_404_NOT_FOUND, response.status_code)
+
+
     def test_get_single_artist(self) -> None:
         """Get single artist test"""
         artist_to_test = Artist.objects.first()

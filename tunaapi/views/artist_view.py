@@ -7,7 +7,11 @@ from tunaapi.models import Artist
 class ArtistView(ViewSet):
 
     def retrieve(self, request, pk=None):
-        artist = Artist.objects.get(pk=pk)
+        try:
+            artist = Artist.objects.get(pk=pk)
+        except Artist.DoesNotExist:
+            return Response(None, status=status.HTTP_404_NOT_FOUND)
+
         serialized = ArtistSerializer(artist, context={'request': request})
         return Response(serialized.data, status=status.HTTP_200_OK)
 
