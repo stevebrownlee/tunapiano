@@ -2,7 +2,7 @@
     "tests": [
       {
         "name": "Autograding",
-        "setup": "pipenv install",
+        "setup": "",
         "run": "run test",
         "input": "",
         "output": "",
