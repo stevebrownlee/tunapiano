@@ -3,7 +3,7 @@
       {
         "name": "Autograding",
         "setup": "",
-        "run": "./test.sh",
+        "run": "python3 manage.py test",
         "input": "",
         "output": "",
         "comparison": "included",

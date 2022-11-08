@@ -17,14 +17,16 @@ jobs:
         db: [sqlite]
         python-version: [3.9]
 
+
+
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
       uses: actions/setup-python@v2
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependecies
-      uses: VaultVulp/action-pipenv@v2.0.1
-      with:
-        command: install
+
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
     - uses: education/autograding@v1
