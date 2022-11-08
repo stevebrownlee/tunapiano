@@ -3,7 +3,7 @@
       {
         "name": "Autograding",
         "setup": "",
-        "run": "./test.sh",
+        "run": "pipenv run test",
         "input": "",
         "output": "",
         "comparison": "included",
