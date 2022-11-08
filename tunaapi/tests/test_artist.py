@@ -52,7 +52,6 @@ class ArtistTests(APITestCase):
         response = self.client.get(url)
         self.assertEqual(status.HTTP_404_NOT_FOUND, response.status_code)
 
-
     def test_get_single_artist(self) -> None:
         """Get single artist test"""
         artist_to_test = Artist.objects.first()

@@ -16,10 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from rest_framework import routers
-from tunaapi.views import ArtistView
+from tunaapi.views import ArtistView, SongView
 
 router = routers.DefaultRouter(trailing_slash=False)
 router.register(r'artists', ArtistView, 'artist')
+router.register(r'songs', SongView, 'song')
 
 urlpatterns = [
     path('', include(router.urls)),
