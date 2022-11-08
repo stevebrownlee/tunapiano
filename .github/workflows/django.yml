@@ -13,6 +13,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
+        db: [sqlite]
         python-version: [3.9]
 
     steps:
@@ -26,5 +27,6 @@ jobs:
       with:
         command: install
     - name: Run Tests
-      run: |
-        python manage.py test
+      uses: VaultVulp/action-pipenv@v2.0.1
+      with:
+        command: run test
